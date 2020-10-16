@@ -89,7 +89,7 @@ locals()
 
 `map()` - возвращает итератор, который применяет функцию к каждому элементу итерации, (yielding) результат. По простому - применить функцию к каждому элементу в итераторе [map.py](map.py)
 
-``` Python 3
+``` Python3
 # map(func, *iterable)
 
 def upper(string):
@@ -99,7 +99,7 @@ lower_list = ['one', 'two', 'three']
 upper_list = list(map(upper, lower_list))  # ['ONE', 'TWO', 'THREE']
 ```
 
-``` Python 3
+``` Python3
 # с использованием lambda
 upper_list = list(map(lambda string: string.upper(), lower_list))  # ['ONE', 'TWO', 'THREE']
 
