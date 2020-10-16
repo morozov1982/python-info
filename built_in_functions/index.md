@@ -87,7 +87,25 @@ list()
 
 locals()
 
-map()
+`map()` - возвращает итератор, который применяет функцию к каждому элементу итерации, (yielding) результат. По простому - применить функцию к каждому элементу в итераторе [map.py](map.py)
+
+```
+# map(func, *iterable)
+
+def upper(string):
+    return string.upper()
+
+lower_list = ['one', 'two', 'three']
+upper_list = list(map(upper, lower_list))  # ['ONE', 'TWO', 'THREE']
+```
+
+```
+# с использованием lambda
+upper_list = list(map(lambda string: string.upper(), lower_list))  # ['ONE', 'TWO', 'THREE']
+
+# с использованием генератора
+comp_upper_list = [string.upper() for string in lower_list]  # ['ONE', 'TWO', 'THREE']
+```
 
 max()
 
