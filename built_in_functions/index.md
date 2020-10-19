@@ -49,7 +49,25 @@ eval()
 
 exec()
 
-filter()
+`filter()` - возвращает итератор, из элементов списка отфильтрованных в соответствии с функцией. По простому - вернуть только нужное, убрать ненужное [filter.py](filter.py)
+
+``` Python3
+# filter(func, iterable)
+
+def has_o(string):
+    return 'o' in string.lower()
+
+words = ['One', 'two', 'three', '23Fkjsf']
+filtered_list = list(filter(has_o, words))  # ['One', 'two']
+```
+
+``` Python3
+# с использованием lambda
+filtered_list = list(filter(lambda string: 'o' in string.lower(), words))  # ['One', 'two']
+
+# с использованием генератора
+comp_list = [string for string in words if has_o(string)]  # ['One', 'two']
+```
 
 float()
 
